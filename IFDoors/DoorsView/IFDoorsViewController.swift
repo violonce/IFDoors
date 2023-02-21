@@ -228,6 +228,7 @@ class IFDoorsViewController : IFBaseViewController, UITableViewDelegate, UITable
             cellProps.lockedButtonProps = IFButtonProps()
             cellProps.lockedButtonProps.title = self.getButtonTitle(doorModel.locked!, loading: cellProps.loadingState)
             cellProps.lockedButtonProps.titleColor = self.getButtonTitleColor(doorModel.locked!, loading: cellProps.loadingState)
+            cellProps.lockedButtonProps.touchUpInsideCommand = self.changeModelState(doorModel, props: cellProps, index: i)
             
             props.tableViewCellsProps.append(cellProps)
         }
@@ -296,12 +297,12 @@ class IFDoorsViewController : IFBaseViewController, UITableViewDelegate, UITable
     
     private func getButtonTitleColor(_ locked: Bool, loading: Bool) -> UIColor {
         if loading {
-            return UIColor.colorWithHex(hexString: "")
+            return UIColor.colorWithHex(hexString: "#000000").withAlphaComponent(0.17)
         }
         if locked {
-            return UIColor.colorWithHex(hexString: "")
+            return UIColor.colorWithHex(hexString: "#00448B")
         }
-        return UIColor.colorWithHex(hexString: "")
+        return UIColor.colorWithHex(hexString: "#00448B").withAlphaComponent(0.5)
     }
     
     

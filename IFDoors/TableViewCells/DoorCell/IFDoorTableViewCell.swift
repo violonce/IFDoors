@@ -42,9 +42,9 @@ class IFDoorTableViewCell : IFTableViewCellBase {
         self.doorStateImageView = UIImageView()
         self.lockedButton = UIButton()
         
+        self.contentView.addSubview(self.actionView)
         self.contentView.addSubview(self.borderView)
         self.contentView.addSubview(self.conteinerView)
-        self.contentView.addSubview(self.actionView)
         self.conteinerView.addArrangedSubview(self.titleConteinerView)
         self.conteinerView.addArrangedSubview(self.lockedButton)
         self.stateImageView.addSubview(self.lockedStateImageView)
@@ -100,21 +100,30 @@ class IFDoorTableViewCell : IFTableViewCellBase {
         
         self.titleConteinerView.axis = .horizontal
         self.titleConteinerView.distribution = .fill
-        self.titleConteinerView.alignment = .fill
+        self.titleConteinerView.alignment = .leading
         self.titleConteinerView.spacing = IFDoorsMetrics.tableCellContentIndent.rawValue
         
         self.titleLabel.setContentHuggingPriority(.defaultLow, for: .horizontal)
         self.titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         self.descriptionLabel.setContentHuggingPriority(.defaultLow, for: .horizontal)
         self.descriptionLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        self.stateImageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        self.stateImageView.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
-        self.doorStateImageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        self.doorStateImageView.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        self.stateImageView.setContentHuggingPriority(.required, for: .horizontal)
+        self.stateImageView.setContentCompressionResistancePriority(.required, for: .horizontal)
+        self.stateImageView.setContentHuggingPriority(.required, for: .vertical)
+        self.stateImageView.setContentCompressionResistancePriority(.required, for: .vertical)
+        self.lockedStateImageView.setContentHuggingPriority(.required, for: .horizontal)
+        self.lockedStateImageView.setContentCompressionResistancePriority(.required, for: .horizontal)
+        self.lockedStateImageView.setContentHuggingPriority(.required, for: .vertical)
+        self.lockedStateImageView.setContentCompressionResistancePriority(.required, for: .vertical)
+        self.doorStateImageView.setContentHuggingPriority(.required, for: .horizontal)
+        self.doorStateImageView.setContentCompressionResistancePriority(.required, for: .horizontal)
+        
+        self.titleConteinerView.setContentHuggingPriority(.required, for: .horizontal)
+        self.titleConteinerView.setContentCompressionResistancePriority(.required, for: .horizontal)
         
         self.titleTextConteinerView.axis = .vertical
         self.titleTextConteinerView.distribution = .fill
-        self.titleTextConteinerView.alignment = .fill
+        self.titleTextConteinerView.alignment = .leading
         
         self.conteinerView.axis = .vertical
         self.conteinerView.distribution = .fill
