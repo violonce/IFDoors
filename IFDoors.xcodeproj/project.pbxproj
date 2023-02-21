@@ -14,6 +14,33 @@
 		0983F70E29A3A37200E9D8F8 /* IFDoorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F70D29A3A37200E9D8F8 /* IFDoorsViewController.swift */; };
 		0983F71029A3A3A600E9D8F8 /* IFDoorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F70F29A3A3A600E9D8F8 /* IFDoorModel.swift */; };
 		0983F71229A3A3B400E9D8F8 /* IFDoorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F71129A3A3B400E9D8F8 /* IFDoorsModel.swift */; };
+		0983F71829A3EDA600E9D8F8 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F71729A3EDA600E9D8F8 /* UIColor+Hex.swift */; };
+		0983F71B29A4B0E300E9D8F8 /* IFDoorsViewProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F71A29A4B0E300E9D8F8 /* IFDoorsViewProps.swift */; };
+		0983F71F29A4B40100E9D8F8 /* IFTableViewCellProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F71E29A4B40100E9D8F8 /* IFTableViewCellProps.swift */; };
+		0983F72929A4B9C400E9D8F8 /* IFViewProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F72829A4B9C400E9D8F8 /* IFViewProps.swift */; };
+		0983F72C29A4BEAF00E9D8F8 /* IFCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F72B29A4BEAF00E9D8F8 /* IFCommand.swift */; };
+		0983F72F29A4BF6200E9D8F8 /* IFControlProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F72E29A4BF6200E9D8F8 /* IFControlProps.swift */; };
+		0983F73129A4BFA900E9D8F8 /* IFButtonProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F73029A4BFA900E9D8F8 /* IFButtonProps.swift */; };
+		0983F73329A4BFF400E9D8F8 /* IFImageViewPorps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F73229A4BFF400E9D8F8 /* IFImageViewPorps.swift */; };
+		0983F73529A4C02500E9D8F8 /* IFLabelProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F73429A4C02500E9D8F8 /* IFLabelProps.swift */; };
+		0983F73729A4C09E00E9D8F8 /* IFLabel+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F73629A4C09E00E9D8F8 /* IFLabel+Render.swift */; };
+		0983F73929A4C10D00E9D8F8 /* IFView+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F73829A4C10D00E9D8F8 /* IFView+Render.swift */; };
+		0983F73E29A4C33000E9D8F8 /* IFControl+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F73D29A4C33000E9D8F8 /* IFControl+Render.swift */; };
+		0983F74029A4C5E800E9D8F8 /* IFButton+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F73F29A4C5E800E9D8F8 /* IFButton+Render.swift */; };
+		0983F74229A4CD6500E9D8F8 /* IFImageView+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F74129A4CD6500E9D8F8 /* IFImageView+Render.swift */; };
+		0983F74529A4D01100E9D8F8 /* IFDoorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F74429A4D01100E9D8F8 /* IFDoorTableViewCell.swift */; };
+		0983F74829A4D0D400E9D8F8 /* IFTableViewCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F74729A4D0D400E9D8F8 /* IFTableViewCellBase.swift */; };
+		0983F74B29A4D19200E9D8F8 /* IFViewLiffeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F74A29A4D19200E9D8F8 /* IFViewLiffeCycle.swift */; };
+		0983F74E29A4D21B00E9D8F8 /* IFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F74D29A4D21B00E9D8F8 /* IFView.swift */; };
+		0983F75129A4E82F00E9D8F8 /* IFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F75029A4E82F00E9D8F8 /* IFBaseViewController.swift */; };
+		0983F75429A4EC7800E9D8F8 /* IFDoorsColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F75329A4EC7800E9D8F8 /* IFDoorsColors.swift */; };
+		0983F75629A4ECC300E9D8F8 /* IFDoorsMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F75529A4ECC300E9D8F8 /* IFDoorsMetrics.swift */; };
+		0983F75829A4FEC000E9D8F8 /* IFDoorTableViewCellProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F75729A4FEC000E9D8F8 /* IFDoorTableViewCellProps.swift */; };
+		0983F75E29A5207400E9D8F8 /* Sk-Modernist-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0983F75B29A5207400E9D8F8 /* Sk-Modernist-Bold.otf */; };
+		0983F75F29A5207400E9D8F8 /* Sk-Modernist-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0983F75C29A5207400E9D8F8 /* Sk-Modernist-Regular.otf */; };
+		0983F76029A5207400E9D8F8 /* Sk-Modernist-Mono.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0983F75D29A5207400E9D8F8 /* Sk-Modernist-Mono.otf */; };
+		0983F76229A520CE00E9D8F8 /* IFDoorFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F76129A520CE00E9D8F8 /* IFDoorFonts.swift */; };
+		0983F76A29A54BCE00E9D8F8 /* doors_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 0983F76929A54BCE00E9D8F8 /* doors_list.json */; };
 		2EFC19D09D872A64053EBCD0 /* Pods_IFDoors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AC8DF0CE12A9E59CE20493 /* Pods_IFDoors.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +55,33 @@
 		0983F70D29A3A37200E9D8F8 /* IFDoorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorsViewController.swift; sourceTree = "<group>"; };
 		0983F70F29A3A3A600E9D8F8 /* IFDoorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorModel.swift; sourceTree = "<group>"; };
 		0983F71129A3A3B400E9D8F8 /* IFDoorsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorsModel.swift; sourceTree = "<group>"; };
+		0983F71729A3EDA600E9D8F8 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		0983F71A29A4B0E300E9D8F8 /* IFDoorsViewProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorsViewProps.swift; sourceTree = "<group>"; };
+		0983F71E29A4B40100E9D8F8 /* IFTableViewCellProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFTableViewCellProps.swift; sourceTree = "<group>"; };
+		0983F72829A4B9C400E9D8F8 /* IFViewProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFViewProps.swift; sourceTree = "<group>"; };
+		0983F72B29A4BEAF00E9D8F8 /* IFCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFCommand.swift; sourceTree = "<group>"; };
+		0983F72E29A4BF6200E9D8F8 /* IFControlProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFControlProps.swift; sourceTree = "<group>"; };
+		0983F73029A4BFA900E9D8F8 /* IFButtonProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFButtonProps.swift; sourceTree = "<group>"; };
+		0983F73229A4BFF400E9D8F8 /* IFImageViewPorps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFImageViewPorps.swift; sourceTree = "<group>"; };
+		0983F73429A4C02500E9D8F8 /* IFLabelProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFLabelProps.swift; sourceTree = "<group>"; };
+		0983F73629A4C09E00E9D8F8 /* IFLabel+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IFLabel+Render.swift"; sourceTree = "<group>"; };
+		0983F73829A4C10D00E9D8F8 /* IFView+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IFView+Render.swift"; sourceTree = "<group>"; };
+		0983F73D29A4C33000E9D8F8 /* IFControl+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IFControl+Render.swift"; sourceTree = "<group>"; };
+		0983F73F29A4C5E800E9D8F8 /* IFButton+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IFButton+Render.swift"; sourceTree = "<group>"; };
+		0983F74129A4CD6500E9D8F8 /* IFImageView+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IFImageView+Render.swift"; sourceTree = "<group>"; };
+		0983F74429A4D01100E9D8F8 /* IFDoorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorTableViewCell.swift; sourceTree = "<group>"; };
+		0983F74729A4D0D400E9D8F8 /* IFTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFTableViewCellBase.swift; sourceTree = "<group>"; };
+		0983F74A29A4D19200E9D8F8 /* IFViewLiffeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFViewLiffeCycle.swift; sourceTree = "<group>"; };
+		0983F74D29A4D21B00E9D8F8 /* IFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFView.swift; sourceTree = "<group>"; };
+		0983F75029A4E82F00E9D8F8 /* IFBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFBaseViewController.swift; sourceTree = "<group>"; };
+		0983F75329A4EC7800E9D8F8 /* IFDoorsColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorsColors.swift; sourceTree = "<group>"; };
+		0983F75529A4ECC300E9D8F8 /* IFDoorsMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorsMetrics.swift; sourceTree = "<group>"; };
+		0983F75729A4FEC000E9D8F8 /* IFDoorTableViewCellProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorTableViewCellProps.swift; sourceTree = "<group>"; };
+		0983F75B29A5207400E9D8F8 /* Sk-Modernist-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sk-Modernist-Bold.otf"; sourceTree = "<group>"; };
+		0983F75C29A5207400E9D8F8 /* Sk-Modernist-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sk-Modernist-Regular.otf"; sourceTree = "<group>"; };
+		0983F75D29A5207400E9D8F8 /* Sk-Modernist-Mono.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sk-Modernist-Mono.otf"; sourceTree = "<group>"; };
+		0983F76129A520CE00E9D8F8 /* IFDoorFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorFonts.swift; sourceTree = "<group>"; };
+		0983F76929A54BCE00E9D8F8 /* doors_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = doors_list.json; sourceTree = "<group>"; };
 		28AC8DF0CE12A9E59CE20493 /* Pods_IFDoors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IFDoors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF514AD2B7B60E8D666DB875 /* Pods-IFDoors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFDoors.debug.xcconfig"; path = "Target Support Files/Pods-IFDoors/Pods-IFDoors.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,8 +120,16 @@
 			isa = PBXGroup;
 			children = (
 				0983F70A29A3A30700E9D8F8 /* AppLayer */,
+				0983F71629A3ED8800E9D8F8 /* Extantions */,
 				0983F70B29A3A32700E9D8F8 /* Models */,
+				0983F72A29A4BE9600E9D8F8 /* Helpers */,
+				0983F75229A4EC5800E9D8F8 /* Constants */,
+				0983F72229A4B94F00E9D8F8 /* ViewsProps */,
+				0983F74C29A4D1F700E9D8F8 /* Views */,
+				0983F71329A3D58D00E9D8F8 /* TableViewCells */,
+				0983F74F29A4E80E00E9D8F8 /* BaseViewController */,
 				0983F70C29A3A33600E9D8F8 /* DoorsView */,
+				0983F75929A51FD600E9D8F8 /* Resources */,
 				0983F6FF29A3A2FE00E9D8F8 /* Assets.xcassets */,
 				0983F70129A3A2FE00E9D8F8 /* LaunchScreen.storyboard */,
 				0983F70429A3A2FE00E9D8F8 /* Info.plist */,
@@ -96,9 +158,172 @@
 		0983F70C29A3A33600E9D8F8 /* DoorsView */ = {
 			isa = PBXGroup;
 			children = (
+				0983F71929A4B0CC00E9D8F8 /* Props */,
 				0983F70D29A3A37200E9D8F8 /* IFDoorsViewController.swift */,
 			);
 			path = DoorsView;
+			sourceTree = "<group>";
+		};
+		0983F71329A3D58D00E9D8F8 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0983F74629A4D0BD00E9D8F8 /* BaseCell */,
+				0983F74329A4CFF200E9D8F8 /* DoorCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		0983F71629A3ED8800E9D8F8 /* Extantions */ = {
+			isa = PBXGroup;
+			children = (
+				0983F71729A3EDA600E9D8F8 /* UIColor+Hex.swift */,
+			);
+			path = Extantions;
+			sourceTree = "<group>";
+		};
+		0983F71929A4B0CC00E9D8F8 /* Props */ = {
+			isa = PBXGroup;
+			children = (
+				0983F71A29A4B0E300E9D8F8 /* IFDoorsViewProps.swift */,
+			);
+			path = Props;
+			sourceTree = "<group>";
+		};
+		0983F71C29A4B3CE00E9D8F8 /* TableViewCellProps */ = {
+			isa = PBXGroup;
+			children = (
+				0983F71E29A4B40100E9D8F8 /* IFTableViewCellProps.swift */,
+			);
+			path = TableViewCellProps;
+			sourceTree = "<group>";
+		};
+		0983F72229A4B94F00E9D8F8 /* ViewsProps */ = {
+			isa = PBXGroup;
+			children = (
+				0983F71C29A4B3CE00E9D8F8 /* TableViewCellProps */,
+				0983F72729A4B9A100E9D8F8 /* Label */,
+				0983F72629A4B99300E9D8F8 /* ImageView */,
+				0983F72529A4B98900E9D8F8 /* Button */,
+				0983F72429A4B97A00E9D8F8 /* Control */,
+				0983F72329A4B96900E9D8F8 /* View */,
+			);
+			path = ViewsProps;
+			sourceTree = "<group>";
+		};
+		0983F72329A4B96900E9D8F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0983F72829A4B9C400E9D8F8 /* IFViewProps.swift */,
+				0983F73829A4C10D00E9D8F8 /* IFView+Render.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0983F72429A4B97A00E9D8F8 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				0983F72E29A4BF6200E9D8F8 /* IFControlProps.swift */,
+				0983F73D29A4C33000E9D8F8 /* IFControl+Render.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		0983F72529A4B98900E9D8F8 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				0983F73029A4BFA900E9D8F8 /* IFButtonProps.swift */,
+				0983F73F29A4C5E800E9D8F8 /* IFButton+Render.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		0983F72629A4B99300E9D8F8 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				0983F73229A4BFF400E9D8F8 /* IFImageViewPorps.swift */,
+				0983F74129A4CD6500E9D8F8 /* IFImageView+Render.swift */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		0983F72729A4B9A100E9D8F8 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				0983F73429A4C02500E9D8F8 /* IFLabelProps.swift */,
+				0983F73629A4C09E00E9D8F8 /* IFLabel+Render.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		0983F72A29A4BE9600E9D8F8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0983F72B29A4BEAF00E9D8F8 /* IFCommand.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0983F74329A4CFF200E9D8F8 /* DoorCell */ = {
+			isa = PBXGroup;
+			children = (
+				0983F75729A4FEC000E9D8F8 /* IFDoorTableViewCellProps.swift */,
+				0983F74429A4D01100E9D8F8 /* IFDoorTableViewCell.swift */,
+			);
+			path = DoorCell;
+			sourceTree = "<group>";
+		};
+		0983F74629A4D0BD00E9D8F8 /* BaseCell */ = {
+			isa = PBXGroup;
+			children = (
+				0983F74729A4D0D400E9D8F8 /* IFTableViewCellBase.swift */,
+			);
+			path = BaseCell;
+			sourceTree = "<group>";
+		};
+		0983F74C29A4D1F700E9D8F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0983F74A29A4D19200E9D8F8 /* IFViewLiffeCycle.swift */,
+				0983F74D29A4D21B00E9D8F8 /* IFView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0983F74F29A4E80E00E9D8F8 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0983F75029A4E82F00E9D8F8 /* IFBaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		0983F75229A4EC5800E9D8F8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				0983F75329A4EC7800E9D8F8 /* IFDoorsColors.swift */,
+				0983F75529A4ECC300E9D8F8 /* IFDoorsMetrics.swift */,
+				0983F76129A520CE00E9D8F8 /* IFDoorFonts.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		0983F75929A51FD600E9D8F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0983F76929A54BCE00E9D8F8 /* doors_list.json */,
+				0983F75A29A51FFA00E9D8F8 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0983F75A29A51FFA00E9D8F8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0983F75B29A5207400E9D8F8 /* Sk-Modernist-Bold.otf */,
+				0983F75D29A5207400E9D8F8 /* Sk-Modernist-Mono.otf */,
+				0983F75C29A5207400E9D8F8 /* Sk-Modernist-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		3AE380909835C86491AFC835 /* Pods */ = {
@@ -179,7 +404,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0983F70329A3A2FE00E9D8F8 /* LaunchScreen.storyboard in Resources */,
+				0983F75E29A5207400E9D8F8 /* Sk-Modernist-Bold.otf in Resources */,
+				0983F75F29A5207400E9D8F8 /* Sk-Modernist-Regular.otf in Resources */,
+				0983F76029A5207400E9D8F8 /* Sk-Modernist-Mono.otf in Resources */,
 				0983F70029A3A2FE00E9D8F8 /* Assets.xcassets in Resources */,
+				0983F76A29A54BCE00E9D8F8 /* doors_list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,11 +461,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0983F73529A4C02500E9D8F8 /* IFLabelProps.swift in Sources */,
+				0983F74E29A4D21B00E9D8F8 /* IFView.swift in Sources */,
+				0983F72929A4B9C400E9D8F8 /* IFViewProps.swift in Sources */,
+				0983F73929A4C10D00E9D8F8 /* IFView+Render.swift in Sources */,
+				0983F74029A4C5E800E9D8F8 /* IFButton+Render.swift in Sources */,
+				0983F73329A4BFF400E9D8F8 /* IFImageViewPorps.swift in Sources */,
 				0983F6F729A3A2FB00E9D8F8 /* AppDelegate.swift in Sources */,
+				0983F74829A4D0D400E9D8F8 /* IFTableViewCellBase.swift in Sources */,
+				0983F75429A4EC7800E9D8F8 /* IFDoorsColors.swift in Sources */,
+				0983F74229A4CD6500E9D8F8 /* IFImageView+Render.swift in Sources */,
+				0983F72F29A4BF6200E9D8F8 /* IFControlProps.swift in Sources */,
 				0983F6F929A3A2FB00E9D8F8 /* SceneDelegate.swift in Sources */,
 				0983F71229A3A3B400E9D8F8 /* IFDoorsModel.swift in Sources */,
+				0983F75829A4FEC000E9D8F8 /* IFDoorTableViewCellProps.swift in Sources */,
+				0983F74B29A4D19200E9D8F8 /* IFViewLiffeCycle.swift in Sources */,
+				0983F74529A4D01100E9D8F8 /* IFDoorTableViewCell.swift in Sources */,
+				0983F75129A4E82F00E9D8F8 /* IFBaseViewController.swift in Sources */,
+				0983F72C29A4BEAF00E9D8F8 /* IFCommand.swift in Sources */,
+				0983F73729A4C09E00E9D8F8 /* IFLabel+Render.swift in Sources */,
+				0983F71F29A4B40100E9D8F8 /* IFTableViewCellProps.swift in Sources */,
+				0983F71B29A4B0E300E9D8F8 /* IFDoorsViewProps.swift in Sources */,
+				0983F76229A520CE00E9D8F8 /* IFDoorFonts.swift in Sources */,
+				0983F71829A3EDA600E9D8F8 /* UIColor+Hex.swift in Sources */,
+				0983F73E29A4C33000E9D8F8 /* IFControl+Render.swift in Sources */,
+				0983F75629A4ECC300E9D8F8 /* IFDoorsMetrics.swift in Sources */,
 				0983F70E29A3A37200E9D8F8 /* IFDoorsViewController.swift in Sources */,
 				0983F71029A3A3A600E9D8F8 /* IFDoorModel.swift in Sources */,
+				0983F73129A4BFA900E9D8F8 /* IFButtonProps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +636,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -416,6 +669,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

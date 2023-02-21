@@ -1,0 +1,28 @@
+{
+    "items":[
+        {
+            "id": 1,
+            "title": "Front door",
+            "description": "Home",
+            "locked": true
+        },
+        {
+            "id": 2,
+            "title": "Front door",
+            "description": "Office",
+            "locked": true
+        },
+        {
+            "id": 3,
+            "title": "Inner door",
+            "description": "Bedroom",
+            "locked": false
+        },
+        {
+            "id": 4,
+            "title": "Inner door",
+            "description": "Mashroom",
+            "locked": false
+        }
+    ]
+}

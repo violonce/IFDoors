@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F0A85CD6-808C-4A06-B29A-1820F323F730"
+            uuid = "FB2DF101-BBEE-472C-8D79-BFDE36625B7B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "IFDoors/AppLayer/SceneDelegate.swift"
+            filePath = "IFDoors/DoorsView/IFDoorsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "scene(_:willConnectTo:options:)"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "changeModelState(_:props:index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37549CE8-1671-4933-857C-98E09477A647"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IFDoors/ViewsProps/Control/IFControlProps.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "didTriggerTouchUpInsideAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

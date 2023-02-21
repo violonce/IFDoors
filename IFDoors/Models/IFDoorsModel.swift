@@ -7,6 +7,19 @@
 
 import Foundation
 
-struct IFDoorsModel : Codable {
+struct IFDoorsModel : Decodable {
+    var doors : [IFDoorModel] = []
     
+    init(doors: [IFDoorModel]) {
+        self.doors = doors
+    }
+    
+    enum CodingKeys: String, CodingKey {
+      case items
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.doors = try! container.decode([IFDoorModel].self, forKey: .items)
+   }
 }
