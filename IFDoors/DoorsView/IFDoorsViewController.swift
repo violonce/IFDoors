@@ -177,7 +177,8 @@ class IFDoorsViewController : IFBaseViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:IFDoorTableViewCell = (self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! IFDoorTableViewCell?)!
         let cellProps = self.viewProps.tableViewCellsProps[indexPath.row] as IFDoorTableViewCellProps
-        cellProps.configurateCell(cell: cell)
+//        cellProps.configurateCell(cell: cell)
+        cell.renderProps(cellProps)
         return cell
     }
     

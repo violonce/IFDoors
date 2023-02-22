@@ -7,7 +7,7 @@
 
 import Foundation
 
-class IFDoorTableViewCellProps: IFTableViewCellProps {
+public class IFDoorTableViewCellProps: IFTableViewCellProps {
     var actionViewProps: IFControlProps!
     var stateImageViewProps: IFImageViewProps!
     var lockedStateImageViewProps: IFImageViewProps!
@@ -17,14 +17,4 @@ class IFDoorTableViewCellProps: IFTableViewCellProps {
     var lockedButtonProps: IFButtonProps!
     
     var loadingState:Bool = false
-    
-    public func configurateCell(cell: IFDoorTableViewCell) {
-        cell.actionView?.renderProps(self.actionViewProps)
-        cell.stateImageView?.renderProps(self.stateImageViewProps)
-        cell.lockedStateImageView?.renderProps(self.lockedStateImageViewProps)
-        cell.titleLabel?.renderProps(self.titleLabelProps)
-        cell.descriptionLabel?.renderProps(self.descriptionLabelProps)
-        cell.doorStateImageView?.renderProps(self.doorStateImageViewProps)
-        cell.lockedButton?.renderProps(self.lockedButtonProps)
-    }
 }

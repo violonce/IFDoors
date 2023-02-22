@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-class IFDoorTableViewCell : IFTableViewCellBase {
+public class IFDoorTableViewCell : IFTableViewCellBase {
     var actionView: UIControl!
     
     private var borderView: UIView!
@@ -28,7 +28,7 @@ class IFDoorTableViewCell : IFTableViewCellBase {
     
     var lockedButton: UIButton!
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    public override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(false, animated: false)
     }
     
@@ -129,8 +129,10 @@ class IFDoorTableViewCell : IFTableViewCellBase {
         self.conteinerView.distribution = .fill
         self.conteinerView.alignment = .fill
     }
-    
-    public func renderProps(_ props: IFDoorTableViewCellProps?) {
+}
+
+public extension IFDoorTableViewCell {
+    func renderProps(_ props: IFDoorTableViewCellProps?) {
         super.renderProps(props)
         if let props = props{
             self.actionView?.renderProps(props.actionViewProps)

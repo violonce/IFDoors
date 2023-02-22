@@ -16,3 +16,8 @@ struct IFDoorFonts {
         return UIFont(name: "Sk-Modernist-Mono", size: size)!
     }
 }
+
+enum IFDoorsFontsSizes: CGFloat {
+    case mediumSize = 16.0
+    case preMediumSize = 14.0
+}
