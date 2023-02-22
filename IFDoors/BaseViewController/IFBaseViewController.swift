@@ -24,6 +24,7 @@ class IFBaseViewController : UIViewController, IFViewLifeCycle {
         self.HUDView = UIView()
         self.activityIndicator = UIActivityIndicatorView(style: .large)
         self.activityIndicator.isHidden = false
+        self.activityIndicator.color = UIColor.darkGray
         self.view.addSubview(self.HUDView)
         self.HUDView.addSubview(self.activityIndicator)
     }

@@ -213,6 +213,7 @@ class IFDoorsViewController : IFBaseViewController, UITableViewDelegate, UITable
         for i in 0 ..< doorsModel.doors.count {
             let doorModel: IFDoorModel = doorsModel.doors[i]
             let cellProps: IFDoorTableViewCellProps = IFDoorTableViewCellProps()
+            cellProps.loadingState = doorModel.loading
             cellProps.actionViewProps = IFControlProps()
             cellProps.actionViewProps.touchUpInsideCommand = self.changeModelState(doorModel, props: cellProps, index: i)
             cellProps.stateImageViewProps = IFImageViewProps()
@@ -239,14 +240,13 @@ class IFDoorsViewController : IFBaseViewController, UITableViewDelegate, UITable
     private func changeModelState(_ model: IFDoorModel, props: IFDoorTableViewCellProps, index:Int) -> Command {
         var resultModel = model
         return Command { [weak self] in
-            self!.showHUD()
-            props.loadingState = true
-            props.actionViewProps.userInteractionEnabled = false
+            resultModel.loading = true
+            props.userInteractionEnabled = false
+            self!.doorsModel.doors[index] = resultModel
             self!.renderProps(props: self!.buildProps())
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [weak self] in
-                self!.hideHUD()
-                props.loadingState = false
-                props.actionViewProps.userInteractionEnabled = true
+                resultModel.loading = false
+                props.userInteractionEnabled = true
                 resultModel.locked = !model.locked!
                 self!.doorsModel.doors[index] = resultModel
                 self!.renderProps(props: self!.buildProps())
@@ -286,8 +286,8 @@ class IFDoorsViewController : IFBaseViewController, UITableViewDelegate, UITable
     
     private func getButtonTitle(_ locked: Bool, loading: Bool) -> String {
         if loading {
-            guard locked else {return "Unlocking"}
-            return "Locking"
+            guard locked else {return "Locking"}
+            return "Unlocking"
         }
         if locked {
             return "Locked"

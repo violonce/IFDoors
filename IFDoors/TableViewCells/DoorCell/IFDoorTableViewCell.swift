@@ -28,6 +28,10 @@ class IFDoorTableViewCell : IFTableViewCellBase {
     
     var lockedButton: UIButton!
     
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(false, animated: false)
+    }
+    
     override func loadSubviews() {
         super.loadSubviews()
         self.actionView = UIControl()
@@ -43,8 +47,8 @@ class IFDoorTableViewCell : IFTableViewCellBase {
         self.lockedButton = UIButton()
         
         self.contentView.addSubview(self.actionView)
-        self.contentView.addSubview(self.borderView)
-        self.contentView.addSubview(self.conteinerView)
+        self.actionView.addSubview(self.borderView)
+        self.borderView.addSubview(self.conteinerView)
         self.conteinerView.addArrangedSubview(self.titleConteinerView)
         self.conteinerView.addArrangedSubview(self.lockedButton)
         self.stateImageView.addSubview(self.lockedStateImageView)

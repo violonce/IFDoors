@@ -12,6 +12,7 @@ struct IFDoorModel : Decodable {
     var title: String?
     var description: String?
     var locked: Bool?
+    var loading: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case id
