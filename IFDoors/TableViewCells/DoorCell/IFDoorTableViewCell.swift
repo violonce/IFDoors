@@ -66,18 +66,15 @@ class IFDoorTableViewCell : IFTableViewCellBase {
         }
         
         self.conteinerView.snp.makeConstraints { make in
-            make.leading.top.trailing.bottom.equalTo(self.borderView)
-        }
-        
-        self.conteinerView.snp.makeConstraints { make in
-            make.leading.top.trailing.bottom.equalTo(self.actionView).offset(IFDoorsMetrics.buttonHieght.rawValue)
-            make.trailing.equalTo(self.actionView).offset(-IFDoorsMetrics.buttonHieght.rawValue)
+            make.leading.equalTo(self.borderView).offset(IFDoorsMetrics.topIndent.rawValue)
+            make.top.equalTo(self.borderView).offset(IFDoorsMetrics.topIndent.rawValue)
+            make.trailing.equalTo(self.borderView).offset(-IFDoorsMetrics.topIndent.rawValue)
             make.bottom.equalTo(self.borderView)
         }
         
         self.lockedStateImageView.snp.makeConstraints { make in
-            make.top.leading.equalTo(self.stateImageView).offset(IFDoorsMetrics.imageIntoImageIndent.rawValue)
-            make.trailing.bottom.equalTo(self.stateImageView).offset(-IFDoorsMetrics.imageIntoImageIndent.rawValue)
+            make.top.leading.equalTo(self.stateImageView).offset(IFDoorsMetrics.imageIntoImageIndent.rawValue).priority(.required)
+            make.trailing.bottom.equalTo(self.stateImageView).offset(-IFDoorsMetrics.imageIntoImageIndent.rawValue).priority(.required)
         }
         
         self.lockedButton.snp.makeConstraints { make in
@@ -93,7 +90,6 @@ class IFDoorTableViewCell : IFTableViewCellBase {
         self.titleLabel.font = IFDoorFonts.regularFontOfSize(size: 16.0)
         self.descriptionLabel.textColor = UIColor.colorWithHex(hexString: IFDoorsColors.descriptionTextColor.rawValue)
         self.descriptionLabel.font = IFDoorFonts.regularFontOfSize(size: 14.0)
-        self.isUserInteractionEnabled = false
         self.borderView.layer.borderColor = UIColor.colorWithHex(hexString: IFDoorsColors.borderColor.rawValue).cgColor
         self.borderView.layer.borderWidth = IFDoorsMetrics.tableCellBorderWidth.rawValue
         self.borderView.layer.cornerRadius = IFDoorsMetrics.tableCellCorenerRadius.rawValue

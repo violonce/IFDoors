@@ -36,5 +36,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A76A4E29-67EC-44ED-A4FB-8F105B114FD3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IFDoors/DoorsView/IFDoorsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "changeModelState(_:props:index:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A76A4E29-67EC-44ED-A4FB-8F105B114FD3 - 27ecc0e03e52eba8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in IFDoors.IFDoorsViewController.changeModelState(_: IFDoors.IFDoorModel, props: IFDoors.IFDoorTableViewCellProps, index: Swift.Int) -&gt; IFDoors.Command"
+                  moduleName = "IFDoors"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilya/Documents/IFDoors/IFDoors/DoorsView/IFDoorsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "246"
+                  endingLineNumber = "246"
+                  offsetFromSymbolStart = "1696">
+               </Location>
+               <Location
+                  uuid = "A76A4E29-67EC-44ED-A4FB-8F105B114FD3 - 4c454c5b1b4e137f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 () -&gt; () in IFDoors.IFDoorsViewController.changeModelState(_: IFDoors.IFDoorModel, props: IFDoors.IFDoorTableViewCellProps, index: Swift.Int) -&gt; IFDoors.Command"
+                  moduleName = "IFDoors"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilya/Documents/IFDoors/IFDoors/DoorsView/IFDoorsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "246"
+                  endingLineNumber = "246"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ACA2B062-47E4-4B3E-A677-9EE604491458"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IFDoors/DoorsView/IFDoorsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
+            landmarkName = "buildProps()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
