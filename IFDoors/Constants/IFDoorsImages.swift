@@ -34,7 +34,7 @@ enum IFDoorsImages {
         case .locked: return UIImage.init(named: "locked")!
         case .unlocked: return UIImage.init(named: "unlocked")!
         case .lockedDoor: return UIImage.init(named: "lockedDoor")!
-        case .unlockedDoor: return UIImage.init(named: "lockedDoor")!
+        case .unlockedDoor: return UIImage.init(named: "unlockedDoor")!
         }
     }
 }

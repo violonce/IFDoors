@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		093C408929A8B33B00B4AECF /* IFDoorsStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C408829A8B33B00B4AECF /* IFDoorsStrings.swift */; };
 		093C408B29A8B4CA00B4AECF /* IFDoorsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C408A29A8B4CA00B4AECF /* IFDoorsImages.swift */; };
+		093C409729A8C98600B4AECF /* IFAutoDimentionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C409629A8C98600B4AECF /* IFAutoDimentionTableView.swift */; };
 		0983F6F729A3A2FB00E9D8F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F6F629A3A2FB00E9D8F8 /* AppDelegate.swift */; };
 		0983F6F929A3A2FB00E9D8F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F6F829A3A2FB00E9D8F8 /* SceneDelegate.swift */; };
 		0983F70029A3A2FE00E9D8F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0983F6FF29A3A2FE00E9D8F8 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		04A04393B169A41E18FE568C /* Pods-IFDoors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFDoors.release.xcconfig"; path = "Target Support Files/Pods-IFDoors/Pods-IFDoors.release.xcconfig"; sourceTree = "<group>"; };
 		093C408829A8B33B00B4AECF /* IFDoorsStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorsStrings.swift; sourceTree = "<group>"; };
 		093C408A29A8B4CA00B4AECF /* IFDoorsImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorsImages.swift; sourceTree = "<group>"; };
+		093C409629A8C98600B4AECF /* IFAutoDimentionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFAutoDimentionTableView.swift; sourceTree = "<group>"; };
 		0983F6F329A3A2FB00E9D8F8 /* IFDoors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IFDoors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0983F6F629A3A2FB00E9D8F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0983F6F829A3A2FB00E9D8F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,18 +195,9 @@
 			path = Props;
 			sourceTree = "<group>";
 		};
-		0983F71C29A4B3CE00E9D8F8 /* TableViewCellProps */ = {
-			isa = PBXGroup;
-			children = (
-				0983F71E29A4B40100E9D8F8 /* IFTableViewCellProps.swift */,
-			);
-			path = TableViewCellProps;
-			sourceTree = "<group>";
-		};
 		0983F72229A4B94F00E9D8F8 /* ViewsProps */ = {
 			isa = PBXGroup;
 			children = (
-				0983F71C29A4B3CE00E9D8F8 /* TableViewCellProps */,
 				0983F72729A4B9A100E9D8F8 /* Label */,
 				0983F72629A4B99300E9D8F8 /* ImageView */,
 				0983F72529A4B98900E9D8F8 /* Button */,
@@ -279,6 +272,7 @@
 		0983F74629A4D0BD00E9D8F8 /* BaseCell */ = {
 			isa = PBXGroup;
 			children = (
+				0983F71E29A4B40100E9D8F8 /* IFTableViewCellProps.swift */,
 				0983F74729A4D0D400E9D8F8 /* IFTableViewCellBase.swift */,
 			);
 			path = BaseCell;
@@ -289,6 +283,7 @@
 			children = (
 				0983F74A29A4D19200E9D8F8 /* IFViewLiffeCycle.swift */,
 				0983F74D29A4D21B00E9D8F8 /* IFView.swift */,
+				093C409629A8C98600B4AECF /* IFAutoDimentionTableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -482,6 +477,7 @@
 				0983F71229A3A3B400E9D8F8 /* IFDoorsModel.swift in Sources */,
 				0983F75829A4FEC000E9D8F8 /* IFDoorTableViewCellProps.swift in Sources */,
 				0983F74B29A4D19200E9D8F8 /* IFViewLiffeCycle.swift in Sources */,
+				093C409729A8C98600B4AECF /* IFAutoDimentionTableView.swift in Sources */,
 				0983F74529A4D01100E9D8F8 /* IFDoorTableViewCell.swift in Sources */,
 				0983F75129A4E82F00E9D8F8 /* IFBaseViewController.swift in Sources */,
 				0983F72C29A4BEAF00E9D8F8 /* IFCommand.swift in Sources */,

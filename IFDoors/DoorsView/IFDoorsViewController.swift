@@ -21,7 +21,7 @@ class IFDoorsViewController : IFBaseViewController{
     private var homeImageView: UIImageView!
     
     private var tableViewTitle: UILabel!
-    private var tableView: UITableView!
+    private var tableView: IFAutoDimensionTableView!
     
     let cellReuseIdentifier = "DC"
     
@@ -38,7 +38,7 @@ class IFDoorsViewController : IFBaseViewController{
         self.welcomeLabel = UILabel()
         self.homeImageView = UIImageView()
         self.tableViewTitle = UILabel()
-        self.tableView = UITableView(frame: CGRectZero, style: .plain)
+        self.tableView = IFAutoDimensionTableView(frame: CGRectZero, style: .plain)
         
         self.titleConteinerView.addArrangedSubview(self.titleLogoView)
         self.titleConteinerView.addArrangedSubview(self.titleSettingsView)
@@ -134,14 +134,6 @@ class IFDoorsViewController : IFBaseViewController{
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.separatorStyle = .none
-        
-        self.tableView.estimatedRowHeight = UITableView.automaticDimension
-        self.tableView.estimatedSectionHeaderHeight = UITableView.automaticDimension
-        self.tableView.estimatedSectionFooterHeight = UITableView.automaticDimension
-        
-        self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.sectionHeaderHeight = UITableView.automaticDimension
-        self.tableView.sectionFooterHeight = UITableView.automaticDimension
     }
     
     // MARK: - Build props methods
