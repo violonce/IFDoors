@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class IFDoorsViewController : IFBaseViewController, UITableViewDelegate, UITableViewDataSource {
+class IFDoorsViewController : IFBaseViewController{
     
     private var conteinerView: UIStackView!
     
@@ -52,7 +52,6 @@ class IFDoorsViewController : IFBaseViewController, UITableViewDelegate, UITable
         self.conteinerView.addArrangedSubview(self.tableView)
         
         self.view.addSubview(self.conteinerView)
-//        self.view.addSubview(self.tableView)
     }
     
     override func installLayoutConstraints() {
@@ -145,46 +144,9 @@ class IFDoorsViewController : IFBaseViewController, UITableViewDelegate, UITable
         self.tableView.sectionFooterHeight = UITableView.automaticDimension
     }
     
-    // MARK: - load methods
+    // MARK: - Build props methods
     
-    func loadData() {
-        //имитируем загрузку с сети
-        self.showHUD()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [weak self] in
-            if let url = Bundle.main.url(forResource: "doors_list", withExtension: "json") {
-                do {
-                    let data = try Data(contentsOf: url)
-                    self!.doorsModel = try JSONDecoder().decode(IFDoorsModel.self, from: data)
-                    self!.hideHUD()
-                    self!.renderProps(props: self!.buildProps())
-                } catch {
-                    print("error:\(error)")
-                }
-            }
-        }
-    }
-    
-    // MARK: - TableView delegate methods
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.viewProps.tableViewCellsProps.count)
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:IFDoorTableViewCell = (self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! IFDoorTableViewCell?)!
-        let cellProps = self.viewProps.tableViewCellsProps[indexPath.row] as IFDoorTableViewCellProps
-//        cellProps.configurateCell(cell: cell)
-        cell.renderProps(cellProps)
-        return cell
-    }
-    
-    // MARK: - private methods
-    
-    private func renderProps(props: IFDoorsViewProps) {
+    func renderProps(props: IFDoorsViewProps) {
         self.viewProps = props
         self.titleLogoView.renderProps(props.titleLogoImageProps)
         self.titleSettingsView.renderProps(props.settignsImageProps)
@@ -194,7 +156,7 @@ class IFDoorsViewController : IFBaseViewController, UITableViewDelegate, UITable
         self.tableView.reloadData()
     }
     
-    private func buildProps() -> IFDoorsViewProps {
+    func buildProps() -> IFDoorsViewProps {
         var props = IFDoorsViewProps()
         props.titleLogoImageProps = IFImageViewProps()
         props.titleLogoImageProps.image = UIImage.init(named: "logo")
@@ -236,6 +198,25 @@ class IFDoorsViewController : IFBaseViewController, UITableViewDelegate, UITable
         }
         
         return props
+    }
+    
+    // MARK: - load methods
+    
+    func loadData() {
+        //имитируем загрузку с сети
+        self.showHUD()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [weak self] in
+            if let url = Bundle.main.url(forResource: "doors_list", withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: url)
+                    self!.doorsModel = try JSONDecoder().decode(IFDoorsModel.self, from: data)
+                    self!.hideHUD()
+                    self!.renderProps(props: self!.buildProps())
+                } catch {
+                    print("error:\(error)")
+                }
+            }
+        }
     }
     
     private func changeModelState(_ model: IFDoorModel, props: IFDoorTableViewCellProps, index:Int) -> Command {
@@ -307,4 +288,34 @@ class IFDoorsViewController : IFBaseViewController, UITableViewDelegate, UITable
     }
     
     
+}
+
+extension IFDoorsViewController : UITableViewDelegate, UITableViewDataSource {
+    // MARK: - TableView delegate methods
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (self.viewProps.tableViewCellsProps.count)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:IFDoorTableViewCell = (self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? IFDoorTableViewCell)!
+        let cellProps = self.viewProps.tableViewCellsProps[indexPath.row] as IFDoorTableViewCellProps
+        cell.renderProps(cellProps)
+        return cell
+    }
+}
+
+protocol DataDriven {
+    func renderProps(props: IFDoorsViewProps)
+    func buildProps() -> IFDoorsViewProps
+}
+
+extension IFDoorsViewController : DataDriven {
+    // MARK: - private methods
+    
+
 }
