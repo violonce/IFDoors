@@ -94,7 +94,7 @@ class IFDoorsViewController : IFBaseViewController{
         self.titleSettingsView.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         
         self.welcomeLabel.textColor = IFDoorsColors.textColor.color
-        self.welcomeLabel.font = IFDoorFonts.regularFontOfSize(size: 35.0)
+        self.welcomeLabel.font = IFDoorsFonts.font(name: .regular, size: .bigSize)
         self.welcomeLabel.lineBreakMode = .byWordWrapping
         
         self.welcomeLabel.setContentHuggingPriority(.defaultLow, for: .horizontal)
@@ -103,7 +103,7 @@ class IFDoorsViewController : IFBaseViewController{
         self.homeImageView.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         
         self.tableViewTitle.textColor = IFDoorsColors.textColor.color
-        self.tableViewTitle.font = IFDoorFonts.regularFontOfSize(size: 20.0)
+        self.tableViewTitle.font = IFDoorsFonts.font(name: .regular, size: .mediumSize)
 
         
         self.titleConteinerView.axis = .horizontal

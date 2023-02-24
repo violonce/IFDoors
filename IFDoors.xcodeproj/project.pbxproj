@@ -41,7 +41,7 @@
 		0983F75E29A5207400E9D8F8 /* Sk-Modernist-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0983F75B29A5207400E9D8F8 /* Sk-Modernist-Bold.otf */; };
 		0983F75F29A5207400E9D8F8 /* Sk-Modernist-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0983F75C29A5207400E9D8F8 /* Sk-Modernist-Regular.otf */; };
 		0983F76029A5207400E9D8F8 /* Sk-Modernist-Mono.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0983F75D29A5207400E9D8F8 /* Sk-Modernist-Mono.otf */; };
-		0983F76229A520CE00E9D8F8 /* IFDoorFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F76129A520CE00E9D8F8 /* IFDoorFonts.swift */; };
+		0983F76229A520CE00E9D8F8 /* IFDoorsFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F76129A520CE00E9D8F8 /* IFDoorsFonts.swift */; };
 		0983F76A29A54BCE00E9D8F8 /* doors_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 0983F76929A54BCE00E9D8F8 /* doors_list.json */; };
 		2EFC19D09D872A64053EBCD0 /* Pods_IFDoors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AC8DF0CE12A9E59CE20493 /* Pods_IFDoors.framework */; };
 /* End PBXBuildFile section */
@@ -84,7 +84,7 @@
 		0983F75B29A5207400E9D8F8 /* Sk-Modernist-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sk-Modernist-Bold.otf"; sourceTree = "<group>"; };
 		0983F75C29A5207400E9D8F8 /* Sk-Modernist-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sk-Modernist-Regular.otf"; sourceTree = "<group>"; };
 		0983F75D29A5207400E9D8F8 /* Sk-Modernist-Mono.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sk-Modernist-Mono.otf"; sourceTree = "<group>"; };
-		0983F76129A520CE00E9D8F8 /* IFDoorFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorFonts.swift; sourceTree = "<group>"; };
+		0983F76129A520CE00E9D8F8 /* IFDoorsFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorsFonts.swift; sourceTree = "<group>"; };
 		0983F76929A54BCE00E9D8F8 /* doors_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = doors_list.json; sourceTree = "<group>"; };
 		28AC8DF0CE12A9E59CE20493 /* Pods_IFDoors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IFDoors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF514AD2B7B60E8D666DB875 /* Pods-IFDoors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFDoors.debug.xcconfig"; path = "Target Support Files/Pods-IFDoors/Pods-IFDoors.debug.xcconfig"; sourceTree = "<group>"; };
@@ -306,7 +306,7 @@
 			children = (
 				0983F75329A4EC7800E9D8F8 /* IFDoorsColors.swift */,
 				0983F75529A4ECC300E9D8F8 /* IFDoorsMetrics.swift */,
-				0983F76129A520CE00E9D8F8 /* IFDoorFonts.swift */,
+				0983F76129A520CE00E9D8F8 /* IFDoorsFonts.swift */,
 				093C408829A8B33B00B4AECF /* IFDoorsStrings.swift */,
 				093C408A29A8B4CA00B4AECF /* IFDoorsImages.swift */,
 			);
@@ -490,7 +490,7 @@
 				093C408929A8B33B00B4AECF /* IFDoorsStrings.swift in Sources */,
 				0983F71B29A4B0E300E9D8F8 /* IFDoorsViewProps.swift in Sources */,
 				093C408B29A8B4CA00B4AECF /* IFDoorsImages.swift in Sources */,
-				0983F76229A520CE00E9D8F8 /* IFDoorFonts.swift in Sources */,
+				0983F76229A520CE00E9D8F8 /* IFDoorsFonts.swift in Sources */,
 				0983F71829A3EDA600E9D8F8 /* UIColor+Hex.swift in Sources */,
 				0983F73E29A4C33000E9D8F8 /* IFControl+Render.swift in Sources */,
 				0983F75629A4ECC300E9D8F8 /* IFDoorsMetrics.swift in Sources */,

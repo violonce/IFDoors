@@ -91,9 +91,9 @@ public class IFDoorTableViewCell : IFTableViewCellBase {
         super.subviewsDidLoad()
         self.backgroundColor = IFDoorsColors.mainBackgroundColor.color
         self.titleLabel.textColor = IFDoorsColors.textColor.color
-        self.titleLabel.font = IFDoorFonts.regularFontOfSize(size: 16.0)
+        self.titleLabel.font = IFDoorsFonts.font(name: .regular, size: .preMediumSize)
         self.descriptionLabel.textColor = IFDoorsColors.descriptionTextColor.color
-        self.descriptionLabel.font = IFDoorFonts.regularFontOfSize(size: 14.0)
+        self.descriptionLabel.font = IFDoorsFonts.font(name: .regular, size: .smallSize)
         self.borderView.layer.borderColor = IFDoorsColors.borderColor.color.cgColor
         self.borderView.layer.borderWidth = IFDoorsMetrics.tableCellBorderWidth.rawValue
         self.borderView.layer.cornerRadius = IFDoorsMetrics.tableCellCorenerRadius.rawValue
