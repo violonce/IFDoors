@@ -89,12 +89,12 @@ public class IFDoorTableViewCell : IFTableViewCellBase {
     
     override func subviewsDidLoad() {
         super.subviewsDidLoad()
-        self.backgroundColor = UIColor.colorWithHex(hexString: IFDoorsColors.mainBackgroundColor.rawValue)
-        self.titleLabel.textColor = UIColor.colorWithHex(hexString: IFDoorsColors.textColor.rawValue)
+        self.backgroundColor = IFDoorsColors.mainBackgroundColor.color
+        self.titleLabel.textColor = IFDoorsColors.textColor.color
         self.titleLabel.font = IFDoorFonts.regularFontOfSize(size: 16.0)
-        self.descriptionLabel.textColor = UIColor.colorWithHex(hexString: IFDoorsColors.descriptionTextColor.rawValue)
+        self.descriptionLabel.textColor = IFDoorsColors.descriptionTextColor.color
         self.descriptionLabel.font = IFDoorFonts.regularFontOfSize(size: 14.0)
-        self.borderView.layer.borderColor = UIColor.colorWithHex(hexString: IFDoorsColors.borderColor.rawValue).cgColor
+        self.borderView.layer.borderColor = IFDoorsColors.borderColor.color.cgColor
         self.borderView.layer.borderWidth = IFDoorsMetrics.tableCellBorderWidth.rawValue
         self.borderView.layer.cornerRadius = IFDoorsMetrics.tableCellCorenerRadius.rawValue
         

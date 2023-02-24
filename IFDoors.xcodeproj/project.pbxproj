@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093C408929A8B33B00B4AECF /* IFDoorsStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C408829A8B33B00B4AECF /* IFDoorsStrings.swift */; };
+		093C408B29A8B4CA00B4AECF /* IFDoorsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C408A29A8B4CA00B4AECF /* IFDoorsImages.swift */; };
 		0983F6F729A3A2FB00E9D8F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F6F629A3A2FB00E9D8F8 /* AppDelegate.swift */; };
 		0983F6F929A3A2FB00E9D8F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F6F829A3A2FB00E9D8F8 /* SceneDelegate.swift */; };
 		0983F70029A3A2FE00E9D8F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0983F6FF29A3A2FE00E9D8F8 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		04A04393B169A41E18FE568C /* Pods-IFDoors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFDoors.release.xcconfig"; path = "Target Support Files/Pods-IFDoors/Pods-IFDoors.release.xcconfig"; sourceTree = "<group>"; };
+		093C408829A8B33B00B4AECF /* IFDoorsStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorsStrings.swift; sourceTree = "<group>"; };
+		093C408A29A8B4CA00B4AECF /* IFDoorsImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorsImages.swift; sourceTree = "<group>"; };
 		0983F6F329A3A2FB00E9D8F8 /* IFDoors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IFDoors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0983F6F629A3A2FB00E9D8F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0983F6F829A3A2FB00E9D8F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -303,6 +307,8 @@
 				0983F75329A4EC7800E9D8F8 /* IFDoorsColors.swift */,
 				0983F75529A4ECC300E9D8F8 /* IFDoorsMetrics.swift */,
 				0983F76129A520CE00E9D8F8 /* IFDoorFonts.swift */,
+				093C408829A8B33B00B4AECF /* IFDoorsStrings.swift */,
+				093C408A29A8B4CA00B4AECF /* IFDoorsImages.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -481,7 +487,9 @@
 				0983F72C29A4BEAF00E9D8F8 /* IFCommand.swift in Sources */,
 				0983F73729A4C09E00E9D8F8 /* IFLabel+Render.swift in Sources */,
 				0983F71F29A4B40100E9D8F8 /* IFTableViewCellProps.swift in Sources */,
+				093C408929A8B33B00B4AECF /* IFDoorsStrings.swift in Sources */,
 				0983F71B29A4B0E300E9D8F8 /* IFDoorsViewProps.swift in Sources */,
+				093C408B29A8B4CA00B4AECF /* IFDoorsImages.swift in Sources */,
 				0983F76229A520CE00E9D8F8 /* IFDoorFonts.swift in Sources */,
 				0983F71829A3EDA600E9D8F8 /* UIColor+Hex.swift in Sources */,
 				0983F73E29A4C33000E9D8F8 /* IFControl+Render.swift in Sources */,

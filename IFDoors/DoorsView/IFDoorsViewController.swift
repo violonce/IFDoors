@@ -93,7 +93,7 @@ class IFDoorsViewController : IFBaseViewController{
         self.titleSettingsView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         self.titleSettingsView.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         
-        self.welcomeLabel.textColor = UIColor.colorWithHex(hexString: IFDoorsColors.blackColor.rawValue)
+        self.welcomeLabel.textColor = IFDoorsColors.textColor.color
         self.welcomeLabel.font = IFDoorFonts.regularFontOfSize(size: 35.0)
         self.welcomeLabel.lineBreakMode = .byWordWrapping
         
@@ -102,7 +102,7 @@ class IFDoorsViewController : IFBaseViewController{
         self.homeImageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         self.homeImageView.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         
-        self.tableViewTitle.textColor = UIColor.colorWithHex(hexString: IFDoorsColors.textColor.rawValue)
+        self.tableViewTitle.textColor = IFDoorsColors.textColor.color
         self.tableViewTitle.font = IFDoorFonts.regularFontOfSize(size: 20.0)
 
         
@@ -122,14 +122,14 @@ class IFDoorsViewController : IFBaseViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.colorWithHex(hexString: IFDoorsColors.mainBackgroundColor.rawValue)
+        self.view.backgroundColor = IFDoorsColors.mainBackgroundColor.color
         self.configurateTableView()
         self.renderProps(props: self.buildProps())
         self.loadData()
     }
     
     private func configurateTableView() {
-        self.tableView.backgroundColor = UIColor.colorWithHex(hexString: IFDoorsColors.mainBackgroundColor.rawValue)
+        self.tableView.backgroundColor = IFDoorsColors.mainBackgroundColor.color
         self.tableView.register(IFDoorTableViewCell.self, forCellReuseIdentifier: self.cellReuseIdentifier)
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -159,19 +159,18 @@ class IFDoorsViewController : IFBaseViewController{
     func buildProps() -> IFDoorsViewProps {
         var props = IFDoorsViewProps()
         props.titleLogoImageProps = IFImageViewProps()
-        props.titleLogoImageProps.image = UIImage.init(named: "logo")
+        props.titleLogoImageProps.image = IFDoorsImages.logo.image
         props.settignsImageProps = IFButtonProps()
-        props.settignsImageProps.titleImage = UIImage.init(named: "settings")
+        props.settignsImageProps.titleImage = IFDoorsImages.settings.image
         props.settignsImageProps.touchUpInsideCommand = Command(action: { /*[weak self] in*/
             //Здась должен быть переход на экран настроек
         })
         props.welcomeLabelProps = IFLabelProps()
-        props.welcomeLabelProps.text = "Welcome\n"
+        props.welcomeLabelProps.text = IFDoorsStrings.welcome.rawValue
         props.homeImageProps = IFImageViewProps()
-        props.homeImageProps.image = UIImage.init(named: "homeLogo")
+        props.homeImageProps.image = IFDoorsImages.homeLogo.image
         props.tableLabelProps = IFLabelProps()
-        props.tableLabelProps.text = "My doors"
-        props.tableLabelProps.numberOfLines = 0
+        props.tableLabelProps.text = IFDoorsStrings.tableViewTitle.rawValue
         
         for i in 0 ..< doorsModel.doors.count {
             let doorModel: IFDoorModel = doorsModel.doors[i]
@@ -205,7 +204,7 @@ class IFDoorsViewController : IFBaseViewController{
     func loadData() {
         //имитируем загрузку с сети
         self.showHUD()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + IFDoorsMetrics.loadingTime.rawValue) { [weak self] in
             if let url = Bundle.main.url(forResource: "doors_list", withExtension: "json") {
                 do {
                     let data = try Data(contentsOf: url)
@@ -226,7 +225,7 @@ class IFDoorsViewController : IFBaseViewController{
             props.userInteractionEnabled = false
             self!.doorsModel.doors[index] = resultModel
             self!.renderProps(props: self!.buildProps())
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [weak self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + IFDoorsMetrics.loadingTime.rawValue) { [weak self] in
                 resultModel.loading = false
                 props.userInteractionEnabled = true
                 resultModel.locked = !model.locked!
@@ -238,53 +237,53 @@ class IFDoorsViewController : IFBaseViewController{
     
     private func getStateImage(_ locked: Bool, loading: Bool) -> UIImage {
         if loading {
-            return UIImage(named: "loadingEllipse")!
+            return IFDoorsImages.loadingEllipse.image
         }
         if locked {
-            return UIImage(named: "lockedEllipse")!
+            return IFDoorsImages.lockedEllipse.image
         }
-        return UIImage(named: "unlockedEllipse")!
+        return IFDoorsImages.unlockedEllipse.image
     }
     
     private func getLockedStateImage(_ locked: Bool, loading: Bool) -> UIImage {
         if loading {
-            return UIImage(named: "loading")!
+            return IFDoorsImages.loading.image
         }
         if locked {
-            return UIImage(named: "locked")!
+            return IFDoorsImages.locked.image
         }
-        return UIImage(named: "unlocked")!
+        return IFDoorsImages.unlocked.image
     }
     
     private func getDoorLockedStateImage(_ locked: Bool, loading: Bool) -> UIImage {
         if loading {
-            return UIImage()
+            return IFDoorsImages.empty.image
         }
         if locked {
-            return UIImage(named: "lockedDoor")!
+            return IFDoorsImages.lockedDoor.image
         }
-        return UIImage(named: "unlockedDoor")!
+        return IFDoorsImages.unlockedDoor.image
     }
     
     private func getButtonTitle(_ locked: Bool, loading: Bool) -> String {
         if loading {
-            guard locked else {return "Locking"}
-            return "Unlocking"
+            guard locked else {return IFDoorsStrings.locking.rawValue}
+            return IFDoorsStrings.unlocking.rawValue
         }
         if locked {
-            return "Locked"
+            return IFDoorsStrings.locked.rawValue
         }
-        return "Unlocked"
+        return IFDoorsStrings.unlocked.rawValue
     }
     
     private func getButtonTitleColor(_ locked: Bool, loading: Bool) -> UIColor {
         if loading {
-            return UIColor.colorWithHex(hexString: "#000000").withAlphaComponent(0.17)
+            return IFDoorsColors.buttonTitleColorLoading.color
         }
         if locked {
-            return UIColor.colorWithHex(hexString: "#00448B")
+            return IFDoorsColors.buttonTitleColorLocked.color
         }
-        return UIColor.colorWithHex(hexString: "#00448B").withAlphaComponent(0.5)
+        return IFDoorsColors.buttonTitleColorUnlocked.color
     }
     
     
@@ -307,15 +306,4 @@ extension IFDoorsViewController : UITableViewDelegate, UITableViewDataSource {
         cell.renderProps(cellProps)
         return cell
     }
-}
-
-protocol DataDriven {
-    func renderProps(props: IFDoorsViewProps)
-    func buildProps() -> IFDoorsViewProps
-}
-
-extension IFDoorsViewController : DataDriven {
-    // MARK: - private methods
-    
-
 }

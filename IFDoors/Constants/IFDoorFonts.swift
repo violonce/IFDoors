@@ -18,6 +18,20 @@ struct IFDoorFonts {
 }
 
 enum IFDoorsFontsSizes: CGFloat {
+    case bigSize = 32.0
     case mediumSize = 16.0
     case preMediumSize = 14.0
+    
+//    enum IFDoorsFonts: String {
+//        case regular = "Sk-Modernist-Regular"
+//        case mono = "Sk-Modernist-Mono"
+//        case bold = "Sk-Modernist-Bold"
+//    }
+//    
+//    var font :UIFont {
+//        switch self {
+//        case .bigSize: {
+//            
+//        }
+//    }
 }

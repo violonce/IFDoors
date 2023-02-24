@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SnapKit
 
 enum IFDoorsMetrics: CGFloat {
     case topIndent = 20.0
@@ -19,10 +18,7 @@ enum IFDoorsMetrics: CGFloat {
     case tableCellBorderWidth = 1.0
     case tableCellContentIndent = 12
     case imageIntoImageIndent = 10
+    case alphaMedium = 0.5
+    case alphaLight = 0.17
+    case loadingTime = 3.0
 }
-
-//extension ConstraintPriority {
-//    public static var almostRequired: ConstraintPriority {
-//        return 999.0
-//    }
-//}
