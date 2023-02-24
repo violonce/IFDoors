@@ -60,7 +60,7 @@ public class IFDoorTableViewCell : IFTableViewCellBase {
         self.titleConteinerView.addArrangedSubview(self.stateImageView)
         self.titleConteinerView.addArrangedSubview(self.titleTextConteinerView)
         self.titleConteinerView.addArrangedSubview(self.doorStateImageView)
-        self.conteinerView.addSubview(self.HUDView)
+        self.titleConteinerView.addSubview(self.HUDView)
         self.HUDView.addSubview(self.activityIndicator)
         self.titleTextConteinerView.addArrangedSubview(self.titleLabel)
         self.titleTextConteinerView.addArrangedSubview(self.descriptionLabel)
@@ -93,9 +93,8 @@ public class IFDoorTableViewCell : IFTableViewCellBase {
         }
         
         self.HUDView.snp.makeConstraints { make in
-            make.top.equalTo(self.borderView).offset(IFDoorsMetrics.topIndent.rawValue)
-            make.trailing.equalTo(self.borderView).offset(-IFDoorsMetrics.topIndent.rawValue)
-            make.height.width.equalTo(IFDoorsMetrics.buttonHieght.rawValue)
+            make.top.bottom.trailing.equalTo(self.titleConteinerView)
+            make.width.height.equalTo(IFDoorsMetrics.buttonHieght.rawValue)
         }
         self.activityIndicator.snp.makeConstraints { make in
             make.center.equalTo(self.HUDView.snp.center)
