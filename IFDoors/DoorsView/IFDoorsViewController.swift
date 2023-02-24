@@ -167,22 +167,22 @@ class IFDoorsViewController : IFBaseViewController{
         for i in 0 ..< doorsModel.doors.count {
             let doorModel: IFDoorModel = doorsModel.doors[i]
             let cellProps: IFDoorTableViewCellProps = IFDoorTableViewCellProps()
-            cellProps.loadingState = doorModel.loading
+            cellProps.loading = doorModel.loading
             cellProps.actionViewProps = IFControlProps()
             cellProps.actionViewProps.touchUpInsideCommand = self.changeModelState(doorModel, props: cellProps, index: i)
             cellProps.stateImageViewProps = IFImageViewProps()
-            cellProps.stateImageViewProps.image = self.getStateImage(doorModel.locked!, loading: cellProps.loadingState)
+            cellProps.stateImageViewProps.image = self.getStateImage(doorModel.locked!, loading: cellProps.loading)
             cellProps.lockedStateImageViewProps = IFImageViewProps()
-            cellProps.lockedStateImageViewProps.image = self.getLockedStateImage(doorModel.locked!, loading: cellProps.loadingState)
+            cellProps.lockedStateImageViewProps.image = self.getLockedStateImage(doorModel.locked!, loading: cellProps.loading)
             cellProps.titleLabelProps = IFLabelProps()
             cellProps.titleLabelProps.text = doorModel.title
             cellProps.descriptionLabelProps = IFLabelProps()
             cellProps.descriptionLabelProps.text = doorModel.description
             cellProps.doorStateImageViewProps = IFImageViewProps()
-            cellProps.doorStateImageViewProps.image = self.getDoorLockedStateImage(doorModel.locked!, loading: cellProps.loadingState)
+            cellProps.doorStateImageViewProps.image = self.getDoorLockedStateImage(doorModel.locked!, loading: cellProps.loading)
             cellProps.lockedButtonProps = IFButtonProps()
-            cellProps.lockedButtonProps.title = self.getButtonTitle(doorModel.locked!, loading: cellProps.loadingState)
-            cellProps.lockedButtonProps.titleColor = self.getButtonTitleColor(doorModel.locked!, loading: cellProps.loadingState)
+            cellProps.lockedButtonProps.title = self.getButtonTitle(doorModel.locked!, loading: cellProps.loading)
+            cellProps.lockedButtonProps.titleColor = self.getButtonTitleColor(doorModel.locked!, loading: cellProps.loading)
             cellProps.lockedButtonProps.touchUpInsideCommand = self.changeModelState(doorModel, props: cellProps, index: i)
             
             props.tableViewCellsProps.append(cellProps)

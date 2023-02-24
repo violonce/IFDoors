@@ -28,6 +28,9 @@ public class IFDoorTableViewCell : IFTableViewCellBase {
     
     var lockedButton: UIButton!
     
+    var HUDView: UIView!
+    var activityIndicator: UIActivityIndicatorView!
+    
     public override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(false, animated: false)
     }
@@ -45,6 +48,8 @@ public class IFDoorTableViewCell : IFTableViewCellBase {
         self.descriptionLabel = UILabel()
         self.doorStateImageView = UIImageView()
         self.lockedButton = UIButton()
+        self.HUDView = UIView()
+        self.activityIndicator = UIActivityIndicatorView()
         
         self.contentView.addSubview(self.actionView)
         self.actionView.addSubview(self.borderView)
@@ -55,6 +60,8 @@ public class IFDoorTableViewCell : IFTableViewCellBase {
         self.titleConteinerView.addArrangedSubview(self.stateImageView)
         self.titleConteinerView.addArrangedSubview(self.titleTextConteinerView)
         self.titleConteinerView.addArrangedSubview(self.doorStateImageView)
+        self.conteinerView.addSubview(self.HUDView)
+        self.HUDView.addSubview(self.activityIndicator)
         self.titleTextConteinerView.addArrangedSubview(self.titleLabel)
         self.titleTextConteinerView.addArrangedSubview(self.descriptionLabel)
     }
@@ -85,6 +92,14 @@ public class IFDoorTableViewCell : IFTableViewCellBase {
             make.height.equalTo(IFDoorsMetrics.buttonHieght.rawValue)
         }
         
+        self.HUDView.snp.makeConstraints { make in
+            make.top.equalTo(self.borderView).offset(IFDoorsMetrics.topIndent.rawValue)
+            make.trailing.equalTo(self.borderView).offset(-IFDoorsMetrics.topIndent.rawValue)
+            make.height.width.equalTo(IFDoorsMetrics.buttonHieght.rawValue)
+        }
+        self.activityIndicator.snp.makeConstraints { make in
+            make.center.equalTo(self.HUDView.snp.center)
+        }
     }
     
     override func subviewsDidLoad() {
@@ -97,6 +112,7 @@ public class IFDoorTableViewCell : IFTableViewCellBase {
         self.borderView.layer.borderColor = IFDoorsColors.borderColor.color.cgColor
         self.borderView.layer.borderWidth = IFDoorsMetrics.tableCellBorderWidth.rawValue
         self.borderView.layer.cornerRadius = IFDoorsMetrics.tableCellCorenerRadius.rawValue
+        self.lockedStateImageView.contentMode = .scaleAspectFit
         
         self.titleConteinerView.axis = .horizontal
         self.titleConteinerView.distribution = .fill
@@ -109,12 +125,7 @@ public class IFDoorTableViewCell : IFTableViewCellBase {
         self.descriptionLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         self.stateImageView.setContentHuggingPriority(.required, for: .horizontal)
         self.stateImageView.setContentCompressionResistancePriority(.required, for: .horizontal)
-        self.stateImageView.setContentHuggingPriority(.required, for: .vertical)
-        self.stateImageView.setContentCompressionResistancePriority(.required, for: .vertical)
-        self.lockedStateImageView.setContentHuggingPriority(.required, for: .horizontal)
-        self.lockedStateImageView.setContentCompressionResistancePriority(.required, for: .horizontal)
-        self.lockedStateImageView.setContentHuggingPriority(.required, for: .vertical)
-        self.lockedStateImageView.setContentCompressionResistancePriority(.required, for: .vertical)
+        
         self.doorStateImageView.setContentHuggingPriority(.required, for: .horizontal)
         self.doorStateImageView.setContentCompressionResistancePriority(.required, for: .horizontal)
         
@@ -142,6 +153,33 @@ public extension IFDoorTableViewCell {
             self.descriptionLabel?.renderProps(props.descriptionLabelProps)
             self.doorStateImageView?.renderProps(props.doorStateImageViewProps)
             self.lockedButton?.renderProps(props.lockedButtonProps)
+            guard props.loading else {
+                self.hideHUD()
+                return
+            }
+            self.showHUD()
+        }
+    }
+}
+
+extension IFDoorTableViewCell : HUDProtocol {
+    public func showHUD() {
+        DispatchQueue.main.async { [weak self] in
+            self!.doorStateImageView.bringSubviewToFront(self!.HUDView)
+            self!.activityIndicator.alpha = 1
+            self!.activityIndicator.startAnimating()
+            UIView.animate(withDuration: 0.5) { [weak self] in
+                self!.HUDView.alpha = 1
+            }
+        }
+    }
+    
+    public func hideHUD() {
+        DispatchQueue.main.async { [weak self] in
+            self!.activityIndicator.stopAnimating()
+            UIView.animate(withDuration: 0.5) { [weak self] in
+                self!.HUDView.alpha = 0
+            }
         }
     }
 }

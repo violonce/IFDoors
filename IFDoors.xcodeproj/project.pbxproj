@@ -10,6 +10,7 @@
 		093C408929A8B33B00B4AECF /* IFDoorsStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C408829A8B33B00B4AECF /* IFDoorsStrings.swift */; };
 		093C408B29A8B4CA00B4AECF /* IFDoorsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C408A29A8B4CA00B4AECF /* IFDoorsImages.swift */; };
 		093C409729A8C98600B4AECF /* IFAutoDimentionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C409629A8C98600B4AECF /* IFAutoDimentionTableView.swift */; };
+		093C409929A8DA4000B4AECF /* HUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C409829A8DA4000B4AECF /* HUDProtocol.swift */; };
 		0983F6F729A3A2FB00E9D8F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F6F629A3A2FB00E9D8F8 /* AppDelegate.swift */; };
 		0983F6F929A3A2FB00E9D8F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983F6F829A3A2FB00E9D8F8 /* SceneDelegate.swift */; };
 		0983F70029A3A2FE00E9D8F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0983F6FF29A3A2FE00E9D8F8 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		093C408829A8B33B00B4AECF /* IFDoorsStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorsStrings.swift; sourceTree = "<group>"; };
 		093C408A29A8B4CA00B4AECF /* IFDoorsImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFDoorsImages.swift; sourceTree = "<group>"; };
 		093C409629A8C98600B4AECF /* IFAutoDimentionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFAutoDimentionTableView.swift; sourceTree = "<group>"; };
+		093C409829A8DA4000B4AECF /* HUDProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDProtocol.swift; sourceTree = "<group>"; };
 		0983F6F329A3A2FB00E9D8F8 /* IFDoors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IFDoors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0983F6F629A3A2FB00E9D8F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0983F6F829A3A2FB00E9D8F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 		0983F74F29A4E80E00E9D8F8 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				093C409829A8DA4000B4AECF /* HUDProtocol.swift */,
 				0983F75029A4E82F00E9D8F8 /* IFBaseViewController.swift */,
 			);
 			path = BaseViewController;
@@ -493,6 +496,7 @@
 				0983F70E29A3A37200E9D8F8 /* IFDoorsViewController.swift in Sources */,
 				0983F71029A3A3A600E9D8F8 /* IFDoorModel.swift in Sources */,
 				0983F73129A4BFA900E9D8F8 /* IFButtonProps.swift in Sources */,
+				093C409929A8DA4000B4AECF /* HUDProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

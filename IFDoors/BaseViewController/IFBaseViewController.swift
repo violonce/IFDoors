@@ -41,7 +41,9 @@ class IFBaseViewController : UIViewController, IFViewLifeCycle {
     func subviewsDidLoad() {
         
     }
-    
+}
+
+extension IFBaseViewController: HUDProtocol {
     public func showHUD() {
         DispatchQueue.main.async { [weak self] in
             self!.view.bringSubviewToFront(self!.HUDView)

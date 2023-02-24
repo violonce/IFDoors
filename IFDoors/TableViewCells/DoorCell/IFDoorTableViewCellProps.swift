@@ -16,5 +16,5 @@ public class IFDoorTableViewCellProps: IFTableViewCellProps {
     var doorStateImageViewProps: IFImageViewProps!
     var lockedButtonProps: IFButtonProps!
     
-    var loadingState:Bool = false
+    var loading:Bool = false
 }
