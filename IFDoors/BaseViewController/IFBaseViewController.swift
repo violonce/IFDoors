@@ -10,8 +10,14 @@ import SnapKit
 
 class IFBaseViewController : UIViewController, IFViewLifeCycle {
     
-    private var HUDView: UIView!
-    private var activityIndicator: UIActivityIndicatorView!
+    lazy private var HUDView: UIView = {
+        let view = UIView()
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.color = UIColor.darkGray
+        view.addSubview(self.activityIndicator)
+        return view
+    }()
+    private var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +27,7 @@ class IFBaseViewController : UIViewController, IFViewLifeCycle {
     }
     
     func loadSubviews() {
-        self.HUDView = UIView()
-        self.activityIndicator = UIActivityIndicatorView(style: .large)
-        self.activityIndicator.isHidden = false
-        self.activityIndicator.color = UIColor.darkGray
         self.view.addSubview(self.HUDView)
-        self.HUDView.addSubview(self.activityIndicator)
     }
     
     func installLayoutConstraints() {
@@ -46,20 +47,24 @@ class IFBaseViewController : UIViewController, IFViewLifeCycle {
 extension IFBaseViewController: HUDProtocol {
     public func showHUD() {
         DispatchQueue.main.async { [weak self] in
-            self!.view.bringSubviewToFront(self!.HUDView)
-            self!.activityIndicator.alpha = 1
-            self!.activityIndicator.startAnimating()
+            guard let self = self else { return }
+            self.view.bringSubviewToFront(self.HUDView)
+            self.activityIndicator.alpha = 1
+            self.activityIndicator.startAnimating()
             UIView.animate(withDuration: 0.5) { [weak self] in
-                self!.HUDView.alpha = 1
+                guard let self = self else { return }
+                self.HUDView.alpha = 1
             }
         }
     }
     
     public func hideHUD() {
         DispatchQueue.main.async { [weak self] in
-            self!.activityIndicator.stopAnimating()
+            guard let self = self else { return }
+            self.activityIndicator.stopAnimating()
             UIView.animate(withDuration: 0.5) { [weak self] in
-                self!.HUDView.alpha = 0
+                guard let self = self else { return }
+                self.HUDView.alpha = 0
             }
         }
     }

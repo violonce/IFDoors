@@ -10,18 +10,51 @@ import SnapKit
 
 class IFDoorsViewController : IFBaseViewController{
     
-    private var conteinerView: UIStackView!
+    lazy private var conteinerView: UIStackView = {
+        let conteinerView = UIStackView()
+        conteinerView.addArrangedSubview(self.titleConteinerView)
+        conteinerView.addArrangedSubview(self.homeConteinerView)
+        conteinerView.addArrangedSubview(self.tableViewTitle)
+        conteinerView.addArrangedSubview(self.tableView)
+        
+        conteinerView.axis = .vertical
+        conteinerView.distribution = .fill
+        conteinerView.alignment = .top
+        
+        return conteinerView
+    }()
     
-    private var titleConteinerView: UIStackView!
-    private var titleLogoView: UIImageView!
-    private var titleSettingsView: UIButton!
+    lazy private var titleConteinerView: UIStackView = {
+        let titleConteinerView = UIStackView()
+        titleConteinerView.addArrangedSubview(self.titleLogoView)
+        titleConteinerView.addArrangedSubview(self.titleSettingsView)
+        
+        titleConteinerView.axis = .horizontal
+        titleConteinerView.distribution = .equalSpacing
+        titleConteinerView.alignment = .center
+        
+        return titleConteinerView
+    }()
+    private var titleLogoView: UIImageView = UIImageView()
+    private var titleSettingsView: UIButton = UIButton()
     
-    private var homeConteinerView: UIStackView!
-    private var welcomeLabel: UILabel!
-    private var homeImageView: UIImageView!
+    lazy private var homeConteinerView: UIStackView = {
+        let homeConteinerView = UIStackView()
+        homeConteinerView.addArrangedSubview(self.welcomeLabel)
+        homeConteinerView.addArrangedSubview(self.homeImageView)
+        
+        homeConteinerView.axis = .horizontal
+        homeConteinerView.distribution = .equalSpacing
+        homeConteinerView.alignment = .center
+        homeConteinerView.spacing = IFDoorsMetrics.spaceBetweenViews.rawValue
+        
+        return homeConteinerView
+    }()
+    private var welcomeLabel: UILabel = UILabel()
+    private var homeImageView: UIImageView = UIImageView()
     
-    private var tableViewTitle: UILabel!
-    private var tableView: IFAutoDimensionTableView!
+    private var tableViewTitle: UILabel = UILabel()
+    private var tableView: IFAutoDimensionTableView = IFAutoDimensionTableView(frame: CGRectZero, style: .plain)
     
     let cellReuseIdentifier = "DC"
     
@@ -30,27 +63,6 @@ class IFDoorsViewController : IFBaseViewController{
     
     override func loadSubviews() {
         super.loadSubviews()
-        self.conteinerView = UIStackView()
-        self.titleConteinerView = UIStackView()
-        self.titleLogoView = UIImageView()
-        self.titleSettingsView = UIButton()
-        self.homeConteinerView = UIStackView()
-        self.welcomeLabel = UILabel()
-        self.homeImageView = UIImageView()
-        self.tableViewTitle = UILabel()
-        self.tableView = IFAutoDimensionTableView(frame: CGRectZero, style: .plain)
-        
-        self.titleConteinerView.addArrangedSubview(self.titleLogoView)
-        self.titleConteinerView.addArrangedSubview(self.titleSettingsView)
-        
-        self.homeConteinerView.addArrangedSubview(self.welcomeLabel)
-        self.homeConteinerView.addArrangedSubview(self.homeImageView)
-        
-        self.conteinerView.addArrangedSubview(self.titleConteinerView)
-        self.conteinerView.addArrangedSubview(self.homeConteinerView)
-        self.conteinerView.addArrangedSubview(self.tableViewTitle)
-        self.conteinerView.addArrangedSubview(self.tableView)
-        
         self.view.addSubview(self.conteinerView)
     }
     
@@ -104,20 +116,6 @@ class IFDoorsViewController : IFBaseViewController{
         
         self.tableViewTitle.textColor = IFDoorsColors.textColor.color
         self.tableViewTitle.font = IFDoorsFonts.font(name: .regular, size: .mediumSize)
-
-        
-        self.titleConteinerView.axis = .horizontal
-        self.titleConteinerView.distribution = .equalSpacing
-        self.titleConteinerView.alignment = .center
-        
-        self.homeConteinerView.axis = .horizontal
-        self.homeConteinerView.distribution = .equalSpacing
-        self.homeConteinerView.alignment = .center
-        self.homeConteinerView.spacing = IFDoorsMetrics.spaceBetweenViews.rawValue
-        
-        self.conteinerView.axis = .vertical
-        self.conteinerView.distribution = .fill
-        self.conteinerView.alignment = .top
     }
     
     override func viewDidLoad() {
@@ -164,8 +162,7 @@ class IFDoorsViewController : IFBaseViewController{
         props.tableLabelProps = IFLabelProps()
         props.tableLabelProps.text = IFDoorsStrings.tableViewTitle.rawValue
         
-        for i in 0 ..< doorsModel.doors.count {
-            let doorModel: IFDoorModel = doorsModel.doors[i]
+        doorsModel.doors.enumerated().forEach { (i, doorModel) in
             let cellProps: IFDoorTableViewCellProps = IFDoorTableViewCellProps()
             cellProps.loading = doorModel.loading
             cellProps.actionViewProps = IFControlProps()
@@ -197,12 +194,13 @@ class IFDoorsViewController : IFBaseViewController{
         //имитируем загрузку с сети
         self.showHUD()
         DispatchQueue.main.asyncAfter(deadline: .now() + IFDoorsMetrics.loadingTime.rawValue) { [weak self] in
+            guard let self = self else { return }
             if let url = Bundle.main.url(forResource: "doors_list", withExtension: "json") {
                 do {
                     let data = try Data(contentsOf: url)
-                    self!.doorsModel = try JSONDecoder().decode(IFDoorsModel.self, from: data)
-                    self!.hideHUD()
-                    self!.renderProps(props: self!.buildProps())
+                    self.doorsModel = try JSONDecoder().decode(IFDoorsModel.self, from: data)
+                    self.hideHUD()
+                    self.renderProps(props: self.buildProps())
                 } catch {
                     print("error:\(error)")
                 }
@@ -213,16 +211,18 @@ class IFDoorsViewController : IFBaseViewController{
     private func changeModelState(_ model: IFDoorModel, props: IFDoorTableViewCellProps, index:Int) -> Command {
         var resultModel = model
         return Command { [weak self] in
+            guard let self = self else { return }
             resultModel.loading = true
             props.userInteractionEnabled = false
-            self!.doorsModel.doors[index] = resultModel
-            self!.renderProps(props: self!.buildProps())
+            self.doorsModel.doors[index] = resultModel
+            self.renderProps(props: self.buildProps())
             DispatchQueue.main.asyncAfter(deadline: .now() + IFDoorsMetrics.loadingTime.rawValue) { [weak self] in
+                guard let self = self else { return }
                 resultModel.loading = false
                 props.userInteractionEnabled = true
                 resultModel.locked = !model.locked!
-                self!.doorsModel.doors[index] = resultModel
-                self!.renderProps(props: self!.buildProps())
+                self.doorsModel.doors[index] = resultModel
+                self.renderProps(props: self.buildProps())
             }
         }
     }
